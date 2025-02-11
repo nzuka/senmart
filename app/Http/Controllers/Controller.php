@@ -8,5 +8,11 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, ValidatesRequests;
+    use AuthorizesRequests, ValidatesRequests; 
+
+    public function index() {
+        return view('pelanggan.layout.index', [
+            'title' => 'Home',
+        ]);
+    }    
 }
